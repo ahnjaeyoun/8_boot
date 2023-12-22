@@ -15,22 +15,28 @@ public class InterceptorConfig implements WebMvcConfigurer{
 		return new BoardTypeInterceptor();
 	}
 	
-//	@Bean
-//	public BoardTypeInterceptor 다른인터셉터() {
-//		return new BoardTypeInterceptor();
-//	}
+	/*@Bean
+	public BoardTypeInterceptor 다른인터셉터() {
+		return new 다른인터셉터();
+	}*/
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		
-		registry.addInterceptor(boardTypeInterceptor())
+		registry.addInterceptor( boardTypeInterceptor() )
 		.addPathPatterns("/**") // 가로챌 경로 지정(여러개 작성시 , 로 구분)
-		.excludePathPatterns("/css/**", "/images/**", "/js/**"); // 가로채지 않을 경로
+		.excludePathPatterns("/css/**", "/images/**", "/js/**"); // 가로 채지 않을 경로
 		
-//		registry.addInterceptor(다른인터셉터())
-//		.addPathPatterns("/**") // 가로챌 경로 지정(여러개 작성시 , 로 구분)
-//		.excludePathPatterns("/css/**", "/images/**", "/js/**"); // 가로채지 않을 경로
+		
+		/*registry.addInterceptor( 다른인터셉터() )
+		.addPathPatterns("/**") // 가로챌 경로 지정(여러개 작성시 , 로 구분)
+		.excludePathPatterns("/css/**", "/images/**", "/js/**"); // 가로 채지 않을 경로
+		*/
+		
 	}
+	
+	
+	
 	
 	
 }

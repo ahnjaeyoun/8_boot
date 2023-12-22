@@ -7,7 +7,7 @@
 	
 </head>
 <body>
-	<main th:object="${session.loginMember}">
+	<main>
         
          <!-- th:block
 			- html 태그가 아닌 단순히 타임리프를 쓰기 위한 태그가 필요할 때 사용
@@ -97,7 +97,7 @@
 				<th:block th:if="${session.loginMember}">
 					<article class="login-area">
 						<a th:href="@{/myPage/profile}">
-							<img th:src="*{profileImage}" id="memberProfile">
+							<img th:src="@{/images/user.png}" id="memberProfile">
 						</a>
 						
 						<div class="my-info">

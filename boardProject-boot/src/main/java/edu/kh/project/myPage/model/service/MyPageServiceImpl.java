@@ -25,6 +25,7 @@ public class MyPageServiceImpl implements MyPageService{
 	private String filePath;
 	
 	
+	
 	@Autowired
 	private MyPageMapper mapper;
 	

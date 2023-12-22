@@ -16,21 +16,20 @@ public class LoginFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-
+		
 		HttpServletRequest req = (HttpServletRequest)request;
 		HttpServletResponse resp = (HttpServletResponse)response;
 		
 		HttpSession session = req.getSession();
 		
-		if(session.getAttribute("loginMember") == null) { // 로그인이 되어있지 않은 경우
+		if( session.getAttribute("loginMember") == null ) { // 로그인이 되어있지 않은 경우
 			resp.sendRedirect("/loginError");
-			
 			
 		} else {
 			chain.doFilter(request, response);
 			// 다음 필터 또는 컨트롤러로 이동
 		}
+		
 	}
 
-	
 }

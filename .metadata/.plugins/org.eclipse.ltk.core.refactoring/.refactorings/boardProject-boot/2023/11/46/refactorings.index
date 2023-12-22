@@ -11,3 +11,10 @@
 1699924350810	Rename compilation unit 'MyPageDAO.java'
 1700008286504	Delete element
 1700008520276	Copy file
+1700181495286	Rename method 'getListCount'
+1700182923248	Rename resource 'boardDetail.jsp'
+1700182928948	Rename resource 'boardList.jsp'
+1700182933632	Rename resource 'boardUpdate.jsp'
+1700182939351	Rename resource 'boardWrite.jsp'
+1700182947952	Rename resource 'comment.jsp'
+1700188945210	Copy compilation unit
